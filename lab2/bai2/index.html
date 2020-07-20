@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Lab 2</title>
+
+   <style>
+      body {
+         max-width: 1024px;
+         margin: auto;
+      }
+      p {
+         margin: 0;
+         padding: 0;
+      }
+      a {
+         text-decoration: none;
+      }
+
+      /* header nav */
+      .nav-header {
+         background-color: rgb(86, 142, 231);
+         overflow: hidden;
+         border-radius: 1px solid grey;
+      }
+
+      .nav-header a {
+         float: left;
+         color: #f2f2f2;
+         text-align: center;
+         padding: 14px 16px;
+         text-decoration: none;
+         font-size: 17px;
+         width: 15%;
+      }
+
+      .nav-header a:hover {
+         background-color: #ddd;
+         color: black;
+      }
+
+      .nav-header a.active {
+         background-color: #4CAF50;
+         color: white;
+      }
+
+      /* option action */
+      .header-option .action {
+         background-color: rgb(207, 207, 207);
+         text-align: right;
+         height: 40px;
+      }
+
+      .header-option a {
+         float: right;
+         color: black;
+         text-align: center;
+         padding: 10px 16px;
+         text-decoration: none;
+         font-size: 17px;
+         width: 10%;
+      }
+
+      /* search option */
+      .search-header {
+         background-color: rgb(197, 197, 10);
+         border-bottom-right-radius: 2px solid rgb(207, 207, 207);
+         border-bottom-left-radius: 2px solid rgb(207, 207, 207);
+         height: 80px;
+         font-size: 22px;
+         text-align: center;
+         padding: auto;
+      }
+      .search-header form {
+         background-color: #dec48b;
+         display: block;
+         vertical-align: middle;
+      }
+
+
+      /* ===============content format================= */
+      .body {
+         overflow-x: hidden;
+         box-sizing: border-box;
+      }
+
+      .left {
+         display: block;
+         float: left;
+         width: 24%;
+         border: 1px solid grey;
+         border-top-left-radius: 5px;
+         border-top-right-radius: 5px;
+         margin-top: 15px;
+      }
+
+      .center {
+         display: block;
+         float: left;
+         width: 48%;
+         border: 1px solid grey;
+         border-top-left-radius: 5px;
+         border-top-right-radius: 5px;
+         margin-top: 15px;
+         margin-left: 1%;
+      }
+
+      .right {
+         display: block;
+         float: right;
+         width: 25%;
+         border: 1px solid grey;
+         border-top-left-radius: 5px;
+         border-top-right-radius: 5px;
+         margin-top: 15px;
+         margin-left: 1%;
+      }
+
+      /* ======left format======= */
+      .left .title {
+         background-color: rgb(70, 70, 202);
+         color: whitesmoke;
+         height: 30px;
+         border-bottom: 1px solid blue;
+         border-top-left-radius: 5px;
+         border-top-right-radius: 5px;
+         font-size: 17px;
+         padding-left: 5px;
+         padding-top: 5px;
+      }
+
+      ul {
+         list-style-image: url('sqpurple.gif');
+         line-height: 25px;
+         font-size: 15px;
+      }
+
+      .leftt a {
+         text-decoration: none;
+      }
+
+      /* ======center format======= */
+      .center .title {
+         display: inline-block;
+         width: 100%;
+         border: 1px solid grey;
+         height: 25px;
+         padding-top: 2px;
+         font-size: 15px;
+         background-color: rgb(233, 233, 233);
+      }
+      .item {
+         width: 100%;
+         border-bottom: 1px solid #dee2e6;
+         margin-top: 5px;
+         padding-top: 5px;
+         height: 130px;
+      }
+      .item-thumb {
+         width: 155px;
+         height: 125px;
+         float: left;
+         clear: left;
+         margin-top: 2px;
+         margin-right: 15px;
+         margin-bottom: 0;
+         margin-left: 0;
+         border: 1px solid gray;
+      }
+      .item-thumb a {
+         display: flex;
+         width: 100%;
+         height: 100%;
+         transition: transform .5s ease-out .1s;
+      }
+      .item-thumb img {
+         width: 100%;
+         height: 100%;
+      }
+      .item-meta {
+         height: 125px;
+         margin-top: 2px;
+         margin-right: 2px;
+         margin-bottom: 0;
+         margin-left: 0;
+         font-size: 17px;
+      }
+      
+      /* ======right format======= */
+      .announce {
+         border: 1px solid gray;
+         text-align: center;
+         background-color: rgb(73, 83, 226);
+         color: white;
+      }
+      .announce button {
+         background-color: #c5c221; /* Green */
+         border: none;
+         color: black;
+         padding: 10px 20px;
+         text-align: center;
+         text-decoration: none;
+         font-size: 16px;
+         margin-bottom: 10px;
+      }
+
+      .news {
+         border: 1px solid gray;
+         margin-top: 10px;
+         border-top-left-radius: 5px;
+         border-top-right-radius: 5px;
+      }
+      .news .title {
+         background-color: rgb(70, 70, 202);
+         color: whitesmoke;
+         height: 30px;
+         border-bottom: 1px solid blue;
+         border-top-left-radius: 5px;
+         border-top-right-radius: 5px;
+         font-size: 17px;
+         padding-left: 5px;
+         padding-top: 5px;
+      }
+      .news-item {
+         width: 100%;
+         border-bottom: 1px solid #dee2e6;
+         margin-top: 5px;
+         height: 65px;
+      }
+      .news-thumb {
+         float: left;
+         clear: left;
+         margin-top: 3px;
+         margin-right: 10px;
+         margin-bottom: 7px;
+         margin-left: 0;
+         width: 80px;
+         height: 60px;
+         background-size: 35% auto;
+      }
+      .news-thumb a {
+         display: flex;
+         width: 100%;
+         height: 100%;
+         transition: transform .5s ease-out .1s;
+      }
+      .news-thumb img {
+         width: 100%;
+         height: 100%;
+      }
+
+
+      /* ================footer=============== */
+      .footer {
+         border: 1px solid grey;
+         overflow: hidden;
+      }
+
+      .footer a {
+         float: left;
+         color: #ad8787;
+         text-align: center;
+         padding: 14px 16px;
+         text-decoration: none;
+         font-size: 17px;
+         width: 16%;
+      }
+
+      .footer a:hover {
+         background-color: rgb(212, 160, 160);
+         color: black;
+      }
+   </style>
+
+</head>
+
+<body>
+   <div class="top">
+      <div class="page-header">
+         <a href="#">Website Công Ty</a>
+      </div>
+      <div class="nav-header">
+         <a href="#">Trang chủ</a>
+         <a href="#">Thêm Công Ty</a>
+         <a href="#">Công Ty Mới</a>
+         <a href="#">Top Công Ty</a>
+         <a href="#">Tin Tức</a>
+      </div>
+      <hr>
+      <div class="header-option">
+         <div class="action">
+            <a href="#">Tài khoản</a>
+            <a href="register.html">Đăng ký</a>
+            <a href="#">Đăng nhập</a>
+         </div>
+         <div class="search-header">
+            <form action="" method="get">
+               <input type="text" name="" id="" placeholder="Tìm công ty">
+               <label for="">Tìm trong ngành nghề</label>
+               <select name="" id="">
+                  <option value="" selected>[Lựa chọn ngành nghề]</option>
+               </select>
+               <button type="">Tìm kiếm</button>
+            </form>
+         </div>
+      </div>
+   </div>
+
+   <div class="body">
+      <div class="left">
+         <div class="title"><span>NGÀNH NGHỀ</span></div>
+         <div class="list-category">
+            <ul>
+               <li><a href="#">An Ninh-Thám Tử</a></li>
+               <li><a href="#">Bảo Hiểm</a></li>
+               <li><a href="#">Bất Động Sản - Xây dựng</a></li>
+               <li><a href="#">Chế Tạo Máy</a></li>
+               <li><a href="#">Thiết kế Website</a></li>
+               <li><a href="#">Chứng Khoán</a></li>
+               <li><a href="#">Da - Giày</a></li>
+               <li><a href="#">Dệt May - Thời Trang</a></li>
+               <li><a href="#">Du Lịch - Dịch Vụ</a></li>
+               <li><a href="#">Dược Phẩm</a></li>
+               <li><a href="#">Điện Tử Dân Dụng</a></li>
+               <li><a href="#">Đồ Chơi - Thiết Bị Học Tập</a></li>
+               <li><a href="#">Đồ Uống</a></li>
+               <li><a href="#">Giải Trí</a></li>
+            </ul>
+         </div>
+      </div>
+      <div class="center">
+         <div class="title">
+            <p style="float: left; width: 45%; margin-left: 3px;">ĐÁNH GIÁ CAO</span>
+            <p style="float: right; margin-right: 3px;"><a href="#">Xem tất cả</a></span>
+         </div>
+         <div class="list-items">
+            <div class="item">
+               <div class="item-thumb">
+                  <a href=""><img
+                        src="https://photo-1-baomoi.zadn.vn/w100_r1x1/2020_07_20_293_35750789/90854690efd3068d5fc2.jpg"
+                        alt=""></a>
+               </div>
+               <div class="item-meta">
+                  <span class="item-heading"><a href="#">Công Ty Nhà Sách Kinh Tế</a></span>
+                  <p>Địa chỉ: <span class="item-address">6 Vinh Hội, F4, Q4, HCM</span></p>
+                  <p>Phone: <span class="item-phone">09686073763</span></p>
+                  <p>Email: <span class="item-email">levanhen@wapvn.com</span></p>
+                  <p><span class="item-site"><a href="">http://www.nhasachkinhte.net</a></span></p>
+               </div>
+            </div>
+            <div class="item">
+               <div class="item-thumb">
+                  <a href=""><img
+                        src="https://photo-atm-baomoi.zadn.vn/w300_r3x2/adtima-media.zadn.vn/2020/07/e8d3a4f0-ddf7-4ba9-9f7a-03533ec484ca.jpg"
+                        alt=""></a>
+               </div>
+               <div class="item-meta">
+                  <span class="item-heading"><a href="#">CÔNG TY CỔ PHẦN ĐẦU TƯ KINH DOANH ĐỊA ỐC HƯNG THỊNH</a></span>
+                  <p>Địa chỉ: <span class="item-address">47 Tú Xương, Q7, Tp. HCM</span></p>
+                  <p>Phone: <span class="item-phone">09686073763</span></p>
+                  <p>Email: <span class="item-email"></span></p>
+                  <p><span class="item-site"><a href="">http://www.hungthingcorp.net</a></span></p>
+               </div>
+            </div>
+            <div class="item">
+               <div class="item-thumb">
+                  <a href=""><img
+                        src="https://photo-1-baomoi.zadn.vn/w300_r3x2/2020_07_20_119_35750581/8baf4eb5e7f60ea857e7.jpg"
+                        alt=""></a>
+               </div>
+               <div class="item-meta">
+                  <span class="item-heading"><a href="#">Công ty WAMP - Thiết kế Web và Xây dựng Thương hiệu Online</a></span>
+                  <p>Địa chỉ: <span class="item-address">6 Vinh Hội, F4, Q4, HCM</span></p>
+                  <p>Phone: <span class="item-phone">09686073763</span></p>
+                  <p>Email: <span class="item-email">levanhen@wapvn.com</span></p>
+                  <p><span class="item-site"><a href="">http://www.nhasachkinhte.net</a></span></p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="right">
+         <div class="announce">
+            <h3>ĐĂNG TIN</h3>
+            <h4>KHÔNG CẦN TÀI KHOẢN</h4>
+            <button type=>Đăng Ngay >></button>
+         </div>
+         <div class="news">
+            <div class="title"><span>TIN DOANH NGHIỆP</span></div>
+            <div class="list-item">
+               <div class="news-item">
+                  <div class="news-thumb">
+                     <a href=""><img src="https://photo-1-baomoi.zadn.vn/w300_r4x3_sm/2020_07_20_329_35750693/e2e881fc28bfc1e198ae.jpg" alt=""></a>
+                  </div>
+                  <div class="news-title">
+                     <h4><a href="#">Quy định thi tuyển phương án kiến trúc</a></h4>
+                  </div>
+               </div>
+               <div class="news-item">
+                  <div class="news-thumb">
+                     <a href=""><img src="https://photo-1-baomoi.zadn.vn/w300_r4x3_sm/2020_07_20_329_35750693/e2e881fc28bfc1e198ae.jpg" alt=""></a>
+                  </div>
+                  <div class="news-title">
+                     <h4><a href="#">Quy định thi tuyển phương án kiến trúc</a></h4>
+                  </div>
+               </div>
+               <div class="news-item">
+                  <div class="news-thumb">
+                     <a href=""><img src="https://photo-1-baomoi.zadn.vn/w300_r4x3_sm/2020_07_20_329_35750693/e2e881fc28bfc1e198ae.jpg" alt=""></a>
+                  </div>
+                  <div class="news-title">
+                     <h4><a href="#">Quy định thi tuyển phương án kiến trúc</a></h4>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="footer">
+      <a href="">Nhà đất</a>
+      <a href="">Kiến thức kinh tế</a>
+      <a href="">Kinh tế tài chính</a>
+      <a href="">Kiến thức Laptop</a>
+      <a href="">Xóm Mua bán</a>
+   </div>
+</body>
+
+</html>
