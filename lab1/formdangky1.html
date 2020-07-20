@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Form Dang Ky</title>
+
+   <style>
+      body {
+         max-width: 700px;
+         margin: auto;
+      }
+
+      label {
+         display: inline-block;
+         width: 25%;
+         text-align: left;
+      }
+
+      input {
+         width: 60%;
+         margin: 5px 0;
+         padding: 7px 7px;
+         display: inline-block;
+         border: 1px solid #ccc;
+         box-sizing: border-box;
+      }
+
+      input[type="radio"] {
+         display: inline-block;
+         width: 5%;
+      }
+
+      p.title {
+         width: auto;
+         background-color: rgb(104, 38, 190);
+         color: white;
+         padding-left: 2px;
+         font-size: 22px;
+      }
+
+      .container {
+         border: 1px solid black;
+         box-sizing: border-box;
+         padding: 5px;
+         margin-top: 5px;
+      }
+
+      .error-list {
+         width: 50%;
+         margin-left: 26%;
+      }
+   </style>
+
+</head>
+
+<body>
+
+   <div class="container">
+      <h2>ĐĂNG KÝ KHÁCH HÀNG</h2>
+      <form action="" method="post">
+         <div class="login-info">
+            <p class="title">Thông tin đăng nhập</p>
+            <div class="form-control">
+               <label for="username">Tên đăng nhập:</label>
+               <input type="text" name="username" id="">
+            </div>
+            <div class="form-control">
+               <label for="password">Mật khẩu:</label>
+               <input type="password" name="password" id="">
+            </div>
+         </div>
+         <div class="detail-info">
+            <p class="title">Thông tin chi tiết cá nhân</p>
+            <div class="form-control">
+               <label for="username">Họ tên khách hàng:</label>
+               <input type="text" name="name" id=""><span style="color: red;">(*)</span>
+            </div>
+            <div class="form-control">
+               <label for="birthday">Ngày sinh:</label>
+               <input type="text" name="birthday" id="" placeholder=""><span style="color: red;">(*)</span>
+            </div>
+            <div class="form-control">
+               <label for="birthday">Giới tính:</label>
+               <input type="radio" name="male" id="" checked>Nam
+               <input type="radio" name="female" id="">Nữ
+            </div>
+            <div class="form-control">
+               <label for="email">Đại chỉ Mail:</label>
+               <input type="email" name="email" id="" placeholder=""><span style="color: red;">(*)</span>
+            </div>
+            <div class="form-control">
+               <label for="salary">Ngày sinh:</label>
+               <input type="number" name="salary" id="" placeholder="50000000">
+            </div>
+         </div>
+         <div class="form-control btn-submit">
+            <label for="" style="width:50%;"></label>
+            <button type="submit">Đăng ký</button>
+         </div>
+      </form>
+      <br>
+      <section class="error-list">
+         <div style="color: red;">
+            <span>Danh sách các lỗi:</span>
+            <span>
+               <ul style="color: red;">
+                  <li>Họ tên không được rỗng</li>
+                  <li>Ngày sinh không hợp lệ</li>
+                  <li>Email không hợp lệ</li>
+               </ul>
+            </span>
+         </div>
+      </section>
+
+
+   </div>
+
+</body>
+
+</html>

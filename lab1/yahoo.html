@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Lab 1</title>
+
+   <style>
+      body {
+         max-width: 950px;
+         margin: auto;
+      }
+
+      .container {
+         width: 80%;
+         border-bottom: 1px solid black;
+         border-right: 1px solid black;
+      }
+
+      .header-container {
+         display: inline-block;
+         width: 100%;
+      }
+
+      .logo-container {
+         float: left;
+      }
+
+      .nav-container {
+         float: right;
+      }
+
+      .content-container {
+         width: 70%;
+      }
+
+      hr {
+         width: 100%;
+         text-align: left;
+         margin-left: 0;
+      }
+
+      label {
+         display: inline-block;
+         width: 30%;
+         text-align: right;
+      }
+
+      input {
+         width: 35%;
+      }
+
+      input[name=first_name],
+      input[name=last_name] {
+         width: 17%;
+      }
+
+      input[name=date],
+      input[name=year] {
+         width: 7%;
+      }
+
+      input[name=username] {
+         width: 16%;
+      }
+
+      input[name=password],
+      input[name=re-password] {
+         width: 30%;
+      }
+
+      input[name=authen-code-input] {
+         width: 16%;
+      }
+
+      .title {
+         text-align: left;
+      }
+
+      .question {
+         width: 35%;
+      }
+
+
+      button[id=submit] {
+         background-color: #ffbf00;
+         height: 35px;
+         width: 30%;
+      }
+   </style>
+</head>
+
+<body>
+   <div class="container">
+      <div class="header-container">
+         <div class="logo-container">
+            <a href="">
+               <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQZ-X_ELzx64vCjAKQ93QmquMNp58smm6zBBQ&usqp=CAU"
+                  height="55" alt="logo">
+            </a>
+         </div>
+         <div class="nav-container">
+            <span id="nav">
+               <a href="">Yahoo</a> | <a href=""> Help</a>
+            </span>
+         </div>
+      </div>
+      <br />
+      <div class="content-container">
+         <div class="title introduce">
+            <h2>Get a Yahoo ID and free email to connect to people and info that you care about.</h2>
+         </div>
+         <hr />
+         <form class="info" method="POST">
+            <div class="self-info">
+               <div class="form-control">
+                  <label for="name">Name</label>
+                  <input type="text" name="first_name" placeholder="First Name" id="">
+                  <input type="text" name="last_name" placeholder="Last Name" id="">
+               </div>
+               <div class="form-control">
+                  <label for="gender">Gender</label>
+                  <select name="gender" id="">
+                     <option value="" checked>- Select One -</option>
+                     <option value="male">Male</option>
+                     <option value="female">Female</option>
+                  </select>
+               </div>
+               <div class="form-control">
+                  <label for="birthday">Birthday</label>
+                  <select name="month" id="">
+                     <option value="" checked>- Select Month -</option>
+                     <option value="january">january</option>
+                     <option value="february">february</option>
+                     <option value="march">march</option>
+                     <option value="april">april</option>
+                     <option value="may">may</option>
+                     <option value="june">june</option>
+                     <option value="july">july</option>
+                     <option value="august">august</option>
+                     <option value="september">september</option>
+                     <option value="october">october</option>
+                     <option value="november">november</option>
+                     <option value="december">december</option>
+                  </select>
+                  <input type="number" name="date" placeholder="Date" id="input_date">
+                  <input type="number" name="year" placeholder="Year" id="input_year">
+               </div>
+               <div class="form-control">
+                  <label for="country">Country</label>
+                  <select name="country" id="">
+                     <option value="vietname" checked>Vietnam</option>
+
+                  </select>
+               </div>
+            </div>
+            <br /><br />
+            <div class="acc-info">
+               <div class="title title-header">
+                  <h3>Select an ID and password</h3>
+               </div>
+               <hr />
+               <div class="form-control">
+                  <label for="username">Yahoo! ID and Email</label>
+                  <input type="text" name="username" id="">
+                  @
+                  <select name="suffixes" id="">
+                     <option value="yahoo.com" checked>yahoo.com</option>
+                  </select>
+                  <button id="check_info">Check</button>
+               </div>
+               <div class="form-control">
+                  <label for="password">Password</label>
+                  <input type="password" name="password" id="">
+               </div>
+               <div class="form-control">
+                  <label for="re-password">Retype Password</label>
+                  <input type="password" name="re-password" id="">
+               </div>
+            </div>
+            <br /><br />
+            <div class="addition-acc-info">
+               <div class="title title-header">
+                  <h3>Select an ID and password</h3>
+               </div>
+               <hr />
+               <div class="form-control">
+                  <label for="alternate-email">Alternate Email</label>
+                  <input type="email" name="alternate-email" id="">
+               </div>
+               <div class="form-control">
+                  <label for="question_one">Secret Question 1</label>
+                  <select name="question_one" class="question" id="">
+                     <option value="" checked>- Select One -</option>
+                     <option value=""></option>
+                     <option value=""></option>
+
+                  </select>
+               </div>
+               <div class="form-control">
+                  <label for="answer_one">Your Answer</label>
+                  <input type="text" name="" id="">
+               </div>
+               <div class="form-control">
+                  <label for="question_two">Secret Question 2</label>
+                  <select name="question_two" class="question" id="">
+                     <option value="" checked>- Select One -</option>
+                     <option value=""></option>
+                     <option value=""></option>
+
+                  </select>
+               </div>
+               <div class="form-control">
+                  <label for="answer_two">Your Answer</label>
+                  <input type="text" name="" id="">
+               </div>
+            </div>
+            <br /><br />
+            <div class="authen-code">
+               <div class="form-control">
+                  <label for="">Type the code shown</label>
+                  <input type="text" name="authen-code-input" id="">
+                  <button id="sound-code">Need audio....</button>
+               </div>
+               <div class="form-control">
+                  <label for=""></label>
+                  <img height="100" width="35%"
+                     src="https://cdnmedia.webthethao.vn/uploads/img/files/images/fullsize/giftcode-zing-speed.jpg"
+                     alt="" id="image_code">
+               </div>
+            </div>
+            <br /><br /></br />
+            <div class="form-control">
+               <label for=""></label>
+               <button id="submit">Create My Account</button>
+            </div>
+         </form>
+         <br />
+      </div>
+   </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Form Dang Nhap He Thong</title>
+
+   <style>
+      body {
+         max-width: 960px;
+      }
+
+      form {
+         line-height: 35px;
+      }
+
+      .container {
+         width: 80%;
+         border: 1.5px dotted black;
+         padding-left: 20px;
+      }
+
+      .right-image img {
+         display: block;
+         float: right;
+         height: 25%;
+         width: 25%;
+         margin-right: 0;
+      }
+
+      label {
+         display: inline-block;
+         /* width: 10%; */
+      }
+
+      button {
+         background-color: rgb(190, 184, 183);
+         background-repeat: no-repeat;
+         background-position: right;
+         padding-right: 15px;
+         cursor: pointer;
+         padding-left: 16px;
+         vertical-align: middle;
+      }
+
+      input[type="number"] {
+         width: 15%;
+         margin-left: 0%;
+      }
+
+      .title {
+         margin-top: -10px;
+         margin-left: 10px;
+         background-color: transparent;
+      }
+
+      .address, .phone {
+         display: inline;
+      }
+
+      .gender, .age {
+         display: inline-block;
+      }
+
+      .phone {
+         margin-left: 3%;
+      }
+      .phone label {
+         width: 15%;
+      }
+
+      .age {
+         margin-left: 10%;
+      }
+      .age label {
+         width: 30%;
+      }
+      .age input {
+         margin-left: 25%;
+      }
+
+   </style>
+
+</head>
+
+<body>
+   <div class="container">
+
+      <div class="right-image">
+         <img src="car-key.png" alt="">
+      </div>
+
+      <form action="" method="post">
+         <div class="form-control title">
+            <h2 style="color: blue;">ĐĂNG NHẬP HỆ THỐNG</h2>
+         </div>
+         <div class="form-control">
+            <label for="">Họ tên</label>
+            <input type="text" name="" id="">
+         </div>
+         <div class="form-control address">
+            <label for="">Địa chỉ</label>
+            <input type="text" name="" id="">
+         </div>
+         <div class="form-control phone">
+            <label for="">Số điện thoại</label>
+            <input type="text" name="" id="">
+         </div>
+         <div class="form-control gender">
+            <label for="">Giới tính</label>
+            <input type="checkbox" name="" id="" value="nam"> nam
+            <input type="checkbox" name="" id="" value="nữ"> nữ
+         </div>
+         <div class="form-control age">
+            <label for="" >Tuổi</label>
+            <input type="number" class="age-input" name="" id="">
+         </div>
+         <div class="form-control">
+            <label for="">Trình độ</label>
+            <select name="trinh-do" id="">
+               <option value="">Đi làm</option>
+               <option value="" selected>Đại học</option>
+               <option value="">THPT</option>
+               <option value="">THCS</option>
+            </select>
+         </div>
+         <br/>
+         <div class="form-control">
+            <button type="submit" id="btn-submit">Submit <img height="25" src="face-with-steam.png" alt="" srcset=""></button>
+            <button id="btn-reset">Reset <img height="25" src="disappointed-emoji6.jpg" alt="" srcset=""></button>
+         </div>
+      </form>
+
+   </div>
+</body>
+
+</html>
