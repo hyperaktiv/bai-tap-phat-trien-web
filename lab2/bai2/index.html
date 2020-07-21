@@ -11,12 +11,18 @@
          max-width: 1024px;
          margin: auto;
       }
+
       p {
          margin: 0;
          padding: 0;
       }
+
       a {
          text-decoration: none;
+      }
+
+      .page-header {
+         display: inline;
       }
 
       /* header nav */
@@ -73,6 +79,7 @@
          text-align: center;
          padding: auto;
       }
+
       .search-header form {
          background-color: #dec48b;
          display: block;
@@ -151,6 +158,7 @@
          font-size: 15px;
          background-color: rgb(233, 233, 233);
       }
+
       .item {
          width: 100%;
          border-bottom: 1px solid #dee2e6;
@@ -158,6 +166,7 @@
          padding-top: 5px;
          height: 130px;
       }
+
       .item-thumb {
          width: 155px;
          height: 125px;
@@ -169,16 +178,19 @@
          margin-left: 0;
          border: 1px solid gray;
       }
+
       .item-thumb a {
          display: flex;
          width: 100%;
          height: 100%;
          transition: transform .5s ease-out .1s;
       }
+
       .item-thumb img {
          width: 100%;
          height: 100%;
       }
+
       .item-meta {
          height: 125px;
          margin-top: 2px;
@@ -187,7 +199,7 @@
          margin-left: 0;
          font-size: 17px;
       }
-      
+
       /* ======right format======= */
       .announce {
          border: 1px solid gray;
@@ -195,8 +207,10 @@
          background-color: rgb(73, 83, 226);
          color: white;
       }
+
       .announce button {
-         background-color: #c5c221; /* Green */
+         background-color: #c5c221;
+         /* Green */
          border: none;
          color: black;
          padding: 10px 20px;
@@ -212,6 +226,7 @@
          border-top-left-radius: 5px;
          border-top-right-radius: 5px;
       }
+
       .news .title {
          background-color: rgb(70, 70, 202);
          color: whitesmoke;
@@ -223,12 +238,14 @@
          padding-left: 5px;
          padding-top: 5px;
       }
+
       .news-item {
          width: 100%;
          border-bottom: 1px solid #dee2e6;
          margin-top: 5px;
          height: 65px;
       }
+
       .news-thumb {
          float: left;
          clear: left;
@@ -240,12 +257,14 @@
          height: 60px;
          background-size: 35% auto;
       }
+
       .news-thumb a {
          display: flex;
          width: 100%;
          height: 100%;
          transition: transform .5s ease-out .1s;
       }
+
       .news-thumb img {
          width: 100%;
          height: 100%;
@@ -262,7 +281,7 @@
          float: left;
          color: #ad8787;
          text-align: center;
-         padding: 14px 16px;
+         padding: 10px;
          text-decoration: none;
          font-size: 17px;
          width: 16%;
@@ -272,6 +291,11 @@
          background-color: rgb(212, 160, 160);
          color: black;
       }
+
+      .footer img {
+         width: auto;
+         height: 90px;
+      }
    </style>
 
 </head>
@@ -279,7 +303,8 @@
 <body>
    <div class="top">
       <div class="page-header">
-         <a href="#">Website Công Ty</a>
+         <a href="#"><img src="img/poster1.png" alt="Website Công Ty" width="49%" height="150px"></a>
+         <a href="#"><img src="img/poster2.jpg" alt="Poster 2" width="49%" height="150px" style="margin-left: 1%;"></a>
       </div>
       <div class="nav-header">
          <a href="#">Trang chủ</a>
@@ -338,9 +363,7 @@
          <div class="list-items">
             <div class="item">
                <div class="item-thumb">
-                  <a href=""><img
-                        src="https://photo-1-baomoi.zadn.vn/w100_r1x1/2020_07_20_293_35750789/90854690efd3068d5fc2.jpg"
-                        alt=""></a>
+                  <a href=""><img src="img/cty1.jpg" alt=""></a>
                </div>
                <div class="item-meta">
                   <span class="item-heading"><a href="#">Công Ty Nhà Sách Kinh Tế</a></span>
@@ -352,9 +375,7 @@
             </div>
             <div class="item">
                <div class="item-thumb">
-                  <a href=""><img
-                        src="https://photo-atm-baomoi.zadn.vn/w300_r3x2/adtima-media.zadn.vn/2020/07/e8d3a4f0-ddf7-4ba9-9f7a-03533ec484ca.jpg"
-                        alt=""></a>
+                  <a href=""><img src="img/cty2.jpg" alt=""></a>
                </div>
                <div class="item-meta">
                   <span class="item-heading"><a href="#">CÔNG TY CỔ PHẦN ĐẦU TƯ KINH DOANH ĐỊA ỐC HƯNG THỊNH</a></span>
@@ -366,12 +387,11 @@
             </div>
             <div class="item">
                <div class="item-thumb">
-                  <a href=""><img
-                        src="https://photo-1-baomoi.zadn.vn/w300_r3x2/2020_07_20_119_35750581/8baf4eb5e7f60ea857e7.jpg"
-                        alt=""></a>
+                  <a href=""><img src="img/paris.jpg" alt=""></a>
                </div>
                <div class="item-meta">
-                  <span class="item-heading"><a href="#">Công ty WAMP - Thiết kế Web và Xây dựng Thương hiệu Online</a></span>
+                  <span class="item-heading"><a href="#">Công ty WAMP - Thiết kế Web và Xây dựng Thương hiệu
+                        Online</a></span>
                   <p>Địa chỉ: <span class="item-address">6 Vinh Hội, F4, Q4, HCM</span></p>
                   <p>Phone: <span class="item-phone">09686073763</span></p>
                   <p>Email: <span class="item-email">levanhen@wapvn.com</span></p>
@@ -391,7 +411,7 @@
             <div class="list-item">
                <div class="news-item">
                   <div class="news-thumb">
-                     <a href=""><img src="https://photo-1-baomoi.zadn.vn/w300_r4x3_sm/2020_07_20_329_35750693/e2e881fc28bfc1e198ae.jpg" alt=""></a>
+                     <a href=""><img src="img/news1.jpg" alt=""></a>
                   </div>
                   <div class="news-title">
                      <h4><a href="#">Quy định thi tuyển phương án kiến trúc</a></h4>
@@ -399,7 +419,7 @@
                </div>
                <div class="news-item">
                   <div class="news-thumb">
-                     <a href=""><img src="https://photo-1-baomoi.zadn.vn/w300_r4x3_sm/2020_07_20_329_35750693/e2e881fc28bfc1e198ae.jpg" alt=""></a>
+                     <a href=""><img src="img/news2.jpg" alt=""></a>
                   </div>
                   <div class="news-title">
                      <h4><a href="#">Quy định thi tuyển phương án kiến trúc</a></h4>
@@ -407,7 +427,7 @@
                </div>
                <div class="news-item">
                   <div class="news-thumb">
-                     <a href=""><img src="https://photo-1-baomoi.zadn.vn/w300_r4x3_sm/2020_07_20_329_35750693/e2e881fc28bfc1e198ae.jpg" alt=""></a>
+                     <a href=""><img src="img/news1.jpg" alt=""></a>
                   </div>
                   <div class="news-title">
                      <h4><a href="#">Quy định thi tuyển phương án kiến trúc</a></h4>
@@ -418,11 +438,11 @@
       </div>
    </div>
    <div class="footer">
-      <a href="">Nhà đất</a>
-      <a href="">Kiến thức kinh tế</a>
-      <a href="">Kinh tế tài chính</a>
-      <a href="">Kiến thức Laptop</a>
-      <a href="">Xóm Mua bán</a>
+      <a href=""><img src="img/nhadat.gif" alt="Nhà đất" srcset=""></a>
+      <a href=""><img src="img/kienthuckinhte.jpg" alt="Kiến thức kinh tế" srcset=""></a>
+      <a href=""><img src="img/kienthuctaichinh.jpg" alt="Kinh tế tài chính"></a>
+      <a href=""><img src="img/laptop.jpg" alt="Kiến thức Laptop"></a>
+      <a href=""><img src="img/muaban.png" alt="Xóm Mua bán"></a>
    </div>
 </body>
 
